@@ -8,6 +8,7 @@ public class Carla : ModuleRules
 {
   bool UsingCarSim = false;
   bool UsingChrono = false;
+  
   private bool IsWindows(ReadOnlyTargetRules Target)
   {
     return (Target.Platform == UnrealTargetPlatform.Win64) || (Target.Platform == UnrealTargetPlatform.Win32);
@@ -16,6 +17,7 @@ public class Carla : ModuleRules
   public Carla(ReadOnlyTargetRules Target) : base(Target)
   {
     PrivatePCHHeaderFile = "Carla.h";
+    bLegacyPublicIncludePaths = false;
 
     if (IsWindows(Target))
     {
