@@ -6,10 +6,10 @@
 
 #pragma once
 
-#include "Traffic/TrafficSignBase.h"
+#include "TrafficSignBase.h"
 
-#include "Traffic/TrafficLightState.h"
-#include "Traffic/TrafficLightComponent.h"
+#include "TrafficLightState.h"
+#include "TrafficLightComponent.h"
 
 #include "TrafficLightBase.generated.h"
 

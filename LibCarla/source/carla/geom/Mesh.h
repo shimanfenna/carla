@@ -12,7 +12,7 @@
 #include <carla/geom/Vector2D.h>
 
 #ifdef LIBCARLA_INCLUDED_FROM_UE4
-#include "Util/ProceduralCustomMesh.h"
+#include "carla/Util/ProceduralCustomMesh.h"
 #endif // LIBCARLA_INCLUDED_FROM_UE4
 
 namespace carla {

@@ -4,7 +4,7 @@
 // This work is licensed under the terms of the MIT license.
 // For a copy, see <https://opensource.org/licenses/MIT>.
 
-#include "Carla.h"
+#include "Carla/Carla.h"
 #include "CityMapGenerator.h"
 
 #include "MapGen/GraphGenerator.h"
@@ -13,7 +13,7 @@
 
 #include "Components/InstancedStaticMeshComponent.h"
 #include "Engine/World.h"
-#include "Paths.h"
+#include "Misc/Paths.h"
 
 #include <algorithm>
 #include <unordered_set>

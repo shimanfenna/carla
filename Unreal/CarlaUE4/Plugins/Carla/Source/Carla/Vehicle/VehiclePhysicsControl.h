@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "Vehicle/WheelPhysicsControl.h"
+#include "WheelPhysicsControl.h"
 #include "VehiclePhysicsControl.generated.h"
 
 USTRUCT(BlueprintType)

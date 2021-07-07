@@ -7,10 +7,9 @@
 #pragma once
 
 #include "PrepareAssetsForCookingCommandlet.h"
-#include "Util/RoadPainterWrapper.h"
+#include "Carla/Util/RoadPainterWrapper.h"
 #include "Runtime/Engine/Classes/Engine/ObjectLibrary.h"
 #include "Carla/OpenDrive/OpenDrive.h"
-#include <carla/opendrive/OpenDriveParser.h>
 
 #include <compiler/disable-ue4-macros.h>
 #include <carla/opendrive/OpenDriveParser.h>

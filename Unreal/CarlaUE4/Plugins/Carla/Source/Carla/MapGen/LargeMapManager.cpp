@@ -8,11 +8,11 @@
 
 #include "UncenteredPivotPointMesh.h"
 
-#include "Walker/WalkerBase.h"
 #include "Carla/Game/Tagger.h"
+#include "Carla/Walker/WalkerBase.h"
 
-#include "FileHelper.h"
-#include "Paths.h"
+#include "Misc/FileHelper.h"
+#include "Misc/Paths.h"
 
 #define LARGEMAP_LOGS 1
 

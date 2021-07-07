@@ -3,7 +3,7 @@
 // This work is licensed under the terms of the MIT license.
 // For a copy, see <https://opensource.org/licenses/MIT>.
 
-#include "Carla.h"
+#include "Carla/Carla.h"
 #include "Carla/Sensor/RssSensor.h"
 #include "StaticMeshResources.h"
 

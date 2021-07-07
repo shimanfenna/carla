@@ -9,7 +9,7 @@
 #include "Carla/Actor/ActorDescription.h"
 #include "Carla/Game/Tagger.h"
 
-#include "Math/DVector.h"
+#include "Carla/Math/DVector.h"
 
 #include <compiler/disable-ue4-macros.h>
 #include <carla/rpc/Actor.h>

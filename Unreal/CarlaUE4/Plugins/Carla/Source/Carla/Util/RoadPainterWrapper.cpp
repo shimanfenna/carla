@@ -7,10 +7,10 @@
 #include "RoadPainterWrapper.h"
 
 #if WITH_EDITOR
-    #include "FileHelper.h"
+  #include "Misc/FileHelper.h"
 #endif
-#include "JsonObject.h"
-#include "JsonSerializer.h"
+#include "Dom/JsonObject.h"
+#include "Serialization/JsonSerializer.h"
 #include "AssetRegistry/AssetRegistryModule.h"
 #include "Engine/StaticMeshActor.h"
 #include "Engine/TextureRenderTarget2D.h"

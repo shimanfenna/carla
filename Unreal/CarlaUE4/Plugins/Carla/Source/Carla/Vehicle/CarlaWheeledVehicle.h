@@ -8,11 +8,11 @@
 
 #include "WheeledVehicle.h"
 
-#include "Vehicle/CarlaWheeledVehicleState.h"
-#include "Vehicle/VehicleControl.h"
-#include "Vehicle/VehicleLightState.h"
-#include "Vehicle/VehicleInputPriority.h"
-#include "Vehicle/VehiclePhysicsControl.h"
+#include "CarlaWheeledVehicleState.h"
+#include "VehicleControl.h"
+#include "VehicleLightState.h"
+#include "VehicleInputPriority.h"
+#include "VehiclePhysicsControl.h"
 #include "VehicleVelocityControl.h"
 #include "WheeledVehicleMovementComponent4W.h"
 #include "VehicleAnimInstance.h"

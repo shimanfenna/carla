@@ -4,7 +4,7 @@
 // This work is licensed under the terms of the MIT license.
 // For a copy, see <https://opensource.org/licenses/MIT>.
 
-#include "Carla.h"
+#include "Carla/Carla.h"
 #include "Carla/Util/ObjectRegister.h"
 
 #include "Carla/Game/Tagger.h"
@@ -14,8 +14,8 @@
 #include "GameFramework/Character.h"
 
 #if WITH_EDITOR
-#include "FileHelper.h"
-#include "Paths.h"
+#include "Misc/FileHelper.h"
+#include "Misc/Paths.h"
 #endif // WITH_EDITOR
 
 namespace crp = carla::rpc;

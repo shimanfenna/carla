@@ -4,14 +4,14 @@
 // This work is licensed under the terms of the MIT license.
 // For a copy, see <https://opensource.org/licenses/MIT>.
 
-#include "Carla.h"
+#include "Carla/Carla.h"
 #include "WheeledVehicleAIController.h"
 
-#include "MapGen/RoadMap.h"
-#include "Traffic/RoutePlanner.h"
-#include "Vehicle/CarlaWheeledVehicle.h"
 #include "Carla/CityMapGenerator.h"
+#include "Carla/MapGen/RoadMap.h"
+#include "Carla/Traffic/RoutePlanner.h"
 #include "Carla/Util/RandomEngine.h"
+#include "Carla/Vehicle/CarlaWheeledVehicle.h"
 
 #include "EngineUtils.h"
 #include "GameFramework/Pawn.h"

@@ -4,11 +4,11 @@
 // This work is licensed under the terms of the MIT license.
 // For a copy, see <https://opensource.org/licenses/MIT>.
 
-#include "Carla.h"
-#include "Carla/Game/CarlaStatics.h"
 #include "OpenDriveGenerator.h"
-#include "Traffic/TrafficLightManager.h"
-#include "Util/ProceduralCustomMesh.h"
+#include "Carla/Carla.h"
+#include "Carla/Game/CarlaStatics.h"
+#include "Carla/Traffic/TrafficLightManager.h"
+#include "Carla/Util/ProceduralCustomMesh.h"
 
 #include <compiler/disable-ue4-macros.h>
 #include <carla/opendrive/OpenDriveParser.h>

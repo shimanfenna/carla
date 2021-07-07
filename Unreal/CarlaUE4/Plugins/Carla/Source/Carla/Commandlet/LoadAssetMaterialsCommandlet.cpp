@@ -9,8 +9,8 @@
 #if WITH_EDITOR
 #include "FileHelpers.h"
 #endif
-#include "JsonObject.h"
-#include "JsonSerializer.h"
+#include "Dom/JsonObject.h"
+#include "Serialization/JsonSerializer.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
 #include "Engine/StreamableManager.h"

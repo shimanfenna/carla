@@ -9,7 +9,7 @@
 #include <cmath>
 #include <algorithm>
 
-#include "Carla.h"
+#include "Carla/Carla.h"
 #include "Carla/Util/RandomEngine.h"
 #include "Carla/Sensor/DVSCamera.h"
 
