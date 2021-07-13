@@ -11,6 +11,7 @@ public class CarlaExporter : ModuleRules
   public CarlaExporter(ReadOnlyTargetRules Target) : base(Target)
   {
     PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
+    bLegacyPublicIncludePaths = false;
 
     PublicIncludePaths.AddRange(
       new string[] {

@@ -7,6 +7,7 @@ public class CarlaUE4Target : TargetRules
 {
 	public CarlaUE4Target(TargetInfo Target) : base(Target)
 	{
+		bLegacyPublicIncludePaths = false;
 		Type = TargetType.Game;
 		ExtraModuleNames.Add("CarlaUE4");
 	}
