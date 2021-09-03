@@ -94,8 +94,8 @@ pipeline
                         {
                             steps
                             {
-                                sh 'make package ARGS="--python-version=3.7,2 --target-wheel-platform=manylinux_2_27_x86_64 --chrono"'
-                                sh 'make package ARGS="--packages=AdditionalMaps,Town06_Opt,Town07_Opt,Town11 --target-archive=AdditionalMaps --clean-intermediate --python-version=3.7,2 --target-wheel-platform=manylinux_2_27_x86_64"'
+                                sh 'make package ARGS="--python-version=3.7,2 --target-wheel-platform=manylinux_2_27_x86_64 --config=Debug --chrono"'
+                                //sh 'make package ARGS="--packages=AdditionalMaps,Town06_Opt,Town07_Opt,Town11 --target-archive=AdditionalMaps --clean-intermediate --python-version=3.7,2 --target-wheel-platform=manylinux_2_27_x86_64"'
                                 sh 'make examples ARGS="localhost 3654"'
                             }
                             post
@@ -220,119 +220,6 @@ pipeline
                                     jenkinsLib = load("/home/jenkins/jenkins_426.groovy")
 
                                     jenkinsLib.DeleteUbuntuBuildNode(JOB_ID)
-                                }
-                            }
-                        }
-                    }
-                }
-                stage('windows')
-                {
-                    agent { label "windows && build && ${JOB_ID}" }
-                    environment
-                    {
-                        UE4_ROOT = 'C:\\UE_4.26'
-                    }
-                    stages
-                    {
-                        stage('windows setup')
-                        {
-                            steps
-                            {
-                                bat """
-                                    call ../setEnv64.bat
-                                    git update-index --skip-worktree Unreal/CarlaUE4/CarlaUE4.uproject
-                                """
-                                bat """
-                                    call ../setEnv64.bat
-                                    make setup ARGS="--chrono"
-                                """
-                            }
-                        }
-                        stage('windows build')
-                        {
-                            steps
-                            {
-                                bat """
-                                    call ../setEnv64.bat
-                                    make LibCarla
-                                """
-                                bat """
-                                    call ../setEnv64.bat
-                                    make PythonAPI
-                                """
-                                bat """
-                                    call ../setEnv64.bat
-                                    make CarlaUE4Editor ARGS="--chrono"
-                                """
-                                bat """
-                                    call ../setEnv64.bat
-                                    make plugins
-                                """
-                            }
-                            post
-                            {
-                                always
-                                {
-                                    archiveArtifacts 'PythonAPI/carla/dist/*.egg'
-                                    archiveArtifacts 'PythonAPI/carla/dist/*.whl'
-                                }
-                            }
-                        }
-                        stage('windows retrieve content')
-                        {
-                            steps
-                            {
-                                bat """
-                                    call ../setEnv64.bat
-                                    call Update.bat
-                                """
-                            }
-                        }
-                        stage('windows package')
-                        {
-                            steps
-                            {
-                                bat """
-                                    call ../setEnv64.bat
-                                    make package ARGS="--chrono"
-                                """
-                                bat """
-                                    call ../setEnv64.bat
-                                    make package ARGS="--packages=AdditionalMaps,Town06_Opt,Town07_Opt,Town11 --target-archive=AdditionalMaps --clean-intermediate"
-                                """
-                            }
-                            post {
-                                always {
-                                    archiveArtifacts 'Build/UE4Carla/*.zip'
-                                }
-                            }
-                        }
-                        stage('windows deploy')
-                        {
-                            when { anyOf { branch "master"; branch "dev"; buildingTag() } }
-                            steps {
-                                bat """
-                                    call ../setEnv64.bat
-                                    git checkout .
-                                    make deploy ARGS="--replace-latest"
-                                """
-                            }
-                        }
-                    }
-                    post
-                    {
-                        always
-                        {
-                            deleteDir()
-
-                            node('master')
-                            {
-                                script
-                                {
-                                    JOB_ID = "${env.BUILD_TAG}"
-                                    jenkinsLib = load("/home/jenkins/jenkins_426.groovy")
-
-                                    jenkinsLib.DeleteWindowsBuildNode(JOB_ID)
                                 }
                             }
                         }
